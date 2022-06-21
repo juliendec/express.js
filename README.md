@@ -1,4 +1,4 @@
-# notice
+# Information sur le projet
 
 Ce travail a été réalisé lors de mes études. 
 
