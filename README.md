@@ -1,3 +1,5 @@
-# Boilerplate pour le projet web 2022
+# notice
 
-Reportez-vous au document "Projet Web - Fork du boilerplate" sur moodle pour les instructions sur comment copier ce boilerplate et commencer votre projet.
+Ce travail a été réalisé lors de mes études. 
+
+Pensez à initialiser NPM et installez la DB
