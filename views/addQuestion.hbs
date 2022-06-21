@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="content-sign addQuestion">
+            <h1>Ask your question here:</h1>
+            <div class="add"><p>{{info}}</p></div>
+            <form class="addQuestion" id="formLog" action="/addQuestion" method="post">
+                <input type="text" class="input-text" name="title" placeholder="title">
+                <select name="category">
+                    {{#each category}}
+                    <option value = "{{this.id_category}}">{{this.category_title}}</option>
+                    {{/each}}
+                </select>
+                <textarea type="text" class="input-text last-input" name="subject" placeholder="subject"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+        
+        </div>
+    </div>
+</div>

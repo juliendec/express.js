@@ -1,0 +1,473 @@
+/* TODO create your style */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,400;0,700;1,300&family=Inter:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    background: #F8F8F8;
+}
+
+
+/*header*/
+
+header, footer{
+    background-color: #f8f8f8;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-brand h6{
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+    margin:0;
+}
+
+.menu-link {
+    margin-top: 17px;
+}
+.menu-link ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.menu-link ul li {
+    padding: 0 15px;
+}
+
+.menu-link ul li a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-decoration: none;
+    color: black;
+}
+
+/*footer*/
+
+.row-footer{
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.footer-content h6{
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+    margin:0;
+}
+
+.footer-content em{
+    font-family: 'Inria Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    padding-left: 20px;
+    color: black;
+}
+
+/*question page*/
+
+.w-content{
+    width: fit-content;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question_page{
+    margin: 40px 0;
+    width: 100%;
+}
+
+.question_page h1, .question_page h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+.question_page span, .question_page .date_question, .question_page p, .question_page .category_question, .answer_question p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: grey;
+    opacity: 85%;
+}
+.question_page span {
+    margin-left: 10px;
+}
+
+.question_page p, .answer_question p{
+    color: black;
+    opacity: 100%;
+}
+.question_page .back{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(165, 165, 165);
+
+}
+.question_page .question-accept{
+    margin-top: 10px;
+}
+.question_page .report_answer form{
+    text-align: center;
+}
+
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: white;
+    color: -internal-light-dark(rgb(243, 21, 21), white);
+    padding: 15px 40px;
+    border-style: outset;
+    border: none;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 70px;
+}
+input[type="submit" i]:hover {
+    background-color: #f0f0f0;
+    transition: 0.3s;
+}
+
+hr {
+    margin: 50px 0;
+    width: 100%;
+}
+.answer_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.answer_content h3{
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.answer_content img{
+    margin-left: 10px;
+}
+
+.my_answer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.my_answer input[type=text]{
+    width: 80%;
+    height: fit-content;
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+}
+.my_answer input[type=text]:focus-visible, .my_answer input[type=text]:active{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 16px;
+}
+.my_answer input[type=submit]{
+    margin-left: 10px;
+    width: 17%;
+}
+.all_answer {
+    display: flex;
+    flex-direction: column;
+}
+.all_answer .answer_content{
+    order: 1;
+    position: relative;
+}
+.all_answer .answer_content.accepted_answer {
+    order: 0;
+}
+
+/* page sign in*/
+
+.content-sign {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+}
+.content-sign .info p{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+.content-sign form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.content-sign form .input-text{
+    width: 45%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    margin: 10px 18px;
+}
+.content-sign form .input-text:focus-visible, .content-sign form .input-text:active{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.content-sign form input[type=submit]{
+    max-width: 250px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+}
+.content-sign form input[type=submit]:hover{
+    opacity: 0.8;
+}
+.content-sign .connection_link {
+    float: right;
+    margin-right: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+.content-sign h1{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+.sign-up-page .input-text{
+    margin-top: 20px;
+}
+.sign-up-page form .last-input{
+    width: 100%;
+    margin: 10px 25px;
+}
+
+/* HOME PAGE */
+
+.case h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+}
+.activite {
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+.case .btn_see_more {
+    background-color: #F8F8F8;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px 15px;
+
+}
+.case .description {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    margin-bottom: 30px;
+}
+.answer_content{
+    background-color:#ffffff ;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    z-index: 10;
+}
+.answer_content:after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    _border-color: #000000 #000000 #000000 #007bff;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: #ffffff transparent transparent transparent;
+    line-height: 0px;
+    z-index: 0;;
+}
+.btn-dark input[type="submit" i]{
+    border: 1px solid rgb(200, 200, 200);
+}
+.container-fluid.bg-image{
+    clip-path: ellipse(57% 80% at 50% 18%);
+    background-color: white;
+    padding-bottom: 160px;
+    background: linear-gradient(rgb(255 255 255 / 16%), rgb(0 0 0 / 8%)), url(/images/undraw_question2.svg);
+    background-repeat: repeat-x;
+    background-position-y: 200px;
+    background-size: 450px;
+}
+.activite{
+    padding-top: 25px;
+}
+.case{
+    background-color: white !important;
+    border-radius: 15px;
+    padding: 20px !important;
+}
+.card{
+    padding: 25px !important;
+}
+.log-in, .register-bg{
+    background: url(/images/undraw_register.svg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-clip: padding-box;
+    background-position: left bottom 0px;
+    padding: 90px 0;
+}
+.register-bg {
+    background: url(/images/undraw_welcome.svg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: left bottom 0px;
+    padding: 40px 0;
+}
+.admin_card .btn_see_more{
+    position: relative;
+    bottom: auto;
+    margin-top: 10px;
+}
+.admin_card .description{
+    margin-bottom: 30px;
+}
+.admin_card .name_author h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+.admin_card .content_flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 50px;
+}
+.admin_card .element_flex{
+    width: 40%;
+    min-width: 100px;
+}
+.admin_card .element_flex.admin_button{
+    width: 60%;
+}
+p.error_message, p.info_member {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+}
+.home_discover{
+    padding-top: 0;
+}
+
+
+/* responsive for smarthphone */
+@media (min-width: 600px){
+    .admin_card .content_flex{
+        min-height: 100px;
+    }
+    .admin_card .element_flex{
+        width: 50%;
+    }
+    .admin_card .element_flex.admin_button{
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px){
+    .admin_card .element_flex{
+        width: 30%;
+    }
+    .admin_card .element_flex.admin_button{
+        width: 70%;
+    }
+    .admin_card .content_flex{
+        min-height: 40px;
+    }
+}
+

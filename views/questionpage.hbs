@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="question_page">
+            <a href="/" class="back"> < Home</a>
+            <h1>{{questions.title}}<span> by {{author.first_name}}</span></h1>
+            <p>{{questions.subject}}</p>
+
+            <div class="flex">
+                <div class="w-content">
+                    <p class="date_question">{{questions.date_question}}</p>
+                    <p class="category_question">Category : {{category.category_title}}</p>
+                </div>
+                <div class="w-content">
+                    {{#if session.user}}
+                        <form action="/reportQuestion" method="POST">
+                            <input type="hidden" name="id_question" value="{{questions.id_question}}">
+                            <input type="submit" value="Report">
+                        </form>
+                    {{/if}}
+                </div>  
+            </div>
+
+            <hr>
+
+            <h2>The answers :</h2>
+            <div class="all_answer">
+                {{#each answers}}
+                <div class="answer_content {{this.is_right}}">
+                    <div class="answer_question w70">
+                        <h3>{{this.author_answer.first_name}}<span>{{this.date_answer}}</span>
+                        {{#if this.correct}}<img src="/images/icons8-correct-60.png" height="30" width="30" alt="icon correct">{{/if}}
+                        </h3>
+                    <p>{{this.subject}}</p>
+                    </div>
+                    <div class="report_answer w30">
+                        {{#if ../session.user}}
+                            <form action="/reportCom" method="POST" class="btn-dark">
+                                <input type="hidden" name="id_answer" value="{{this.id_answer}}">
+                                <input type="hidden" name="id_question" value="{{this.id_question}}">
+                                <input type="submit" value="Report">
+                            </form>
+                        {{/if}}
+                        {{#if ../answerSolution}}
+                        {{else}}
+                            {{#if (eq ../questions.author_question ../session.user.id_user)}}
+                                <form action="/validate" class="question-accept" method="POST" class="btn-dark">
+                                    <input type="hidden" name="id_answer" value="{{this.id_answer}}">
+                                    <input type="hidden" name="id_question" value="{{this.id_question}}">
+                                    <input type="submit" value="Accept answer">
+                                </form>                         
+                            {{/if}}
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <h2>Your answer :</h2>
+            {{#if session.user}}
+                {{#if answerSolution}}
+                <p>An answer has been accepted by the author, you can't add an answer.</p>
+                {{else}}
+                <p class="error_message">{{errorAnswer}}</p>
+                <form action="/reponses" class="my_answer" method="POST">
+                    <input type="hidden" name="id_question" value="{{questions.id_question}}">
+                    <input type="hidden" name="id_user" value="{{session.user.id_user}}">
+                    <input type="text" name="subject">
+                    <input type="submit" value="Send my answer">
+                </form>
+                {{/if}}
+            {{else}}
+                <p>You must be connected to write a answer. <a href="/users">Sign in</a></p>
+            {{/if}}
+            
+        </div>
+    
+    </div>
+</div>

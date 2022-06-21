@@ -1,0 +1,55 @@
+<div class="container-fluid bg-image">
+    <div class="row">
+        <div class="tophomepage">
+
+        <img src="/images/logo.png" width="250" height="250" alt="ErrorNotFound logo">
+        <h1>ErrorNotFound</h1>
+        <em>Your error, is our error</em>
+        
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+            <h2 class="col-12 activite home_discover">Discover our latest questions :</h2>
+
+            <div class="col-sm-6 filtre_gauche_home">
+                    <form method="get" action="/">
+                        <select name="category">
+                                <option value ="">all categories</option>
+                                {{#each category}}
+                                <option value = "{{this.id_category}}">{{this.category_title}}</option>
+                                {{/each}}
+                        </select>
+                        <input type="submit" value="select"> 
+                    </form>
+                </div>
+                <div class="col-sm-6 filtre_droit_home">
+                    <form method="get" action="/">
+                        <input id="searchbar" type="text" name="title" placeholder="Search...">
+                        <button type="submit"> 
+                             <img src="/images/1024px-Search_Icon.svg.png" width="15" height="15" alt="search logo">
+                        </button>
+                    </form>
+                </div>
+        
+ 
+        {{#each questions}}
+        <div class="col-sm-6 card">
+            
+            <div class="case">
+
+           <a href="questions?idQuestion={{this.id_question}}"><h2>{{this.title}} <span><br> category : {{this.nameCategory.category_title}}</span></h2></a>
+
+           <a href="questions?idQuestion={{this.id_question}}"><h3 class="description">{{this.subject}}</h3></a>
+
+           <a href="questions?idQuestion={{this.id_question}}" class="btn_see_more">See more</a>
+        
+            
+            </div>
+        </div>
+        {{/each}}
+    
+    </div>
+</div>

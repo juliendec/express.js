@@ -1,0 +1,208 @@
+/* TODO create your style */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,400;0,700;1,300&family=Inter:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    background: #F8F8F8;
+}
+
+/*logo*/
+
+.tophomepage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.tophomepage h1{
+    
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+    margin: 0;
+}
+
+.tophomepage em{
+    
+
+    font-family: 'Inria Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: black;
+    margin: 0;
+
+}
+
+/*questions homepage*/
+.row select{
+    width: 35%;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 50.5px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+.filtre_gauche_home{
+    width : 35%;
+}
+
+.filtre_droit_home{
+    margin: auto;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.filtre_droit_home input{
+    height: 30px;
+    padding-top: 6px;
+}
+
+.filtre_droit_home button{
+    padding-bottom: 3px;
+    height: 30px;
+    padding-top: 5px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+
+.col-6 a, .col-sm-6 a, .col-md-6 a{
+
+    color: black;
+    text-decoration: none;
+    
+}
+
+.card {
+    padding: 10px;
+
+}
+.case{
+    background-color: rgba(223, 220, 220, 0.492);
+    padding: 10px;
+    margin: 0;
+    min-height: 210px;
+    position: relative;
+}
+
+.case input{
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    
+}
+
+.case span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+color: #9C9C9C;
+}
+
+.case h2 {
+    margin: 0;
+}
+
+.case h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    
+
+color: #000000;
+}
+
+
+/* add question page*/
+
+.content-sign .addQuestion select{
+    width: 45%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 50.5px;
+
+}
+
+.content-sign .addQuestion form{
+    width: 45%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.content-sign .addQuestion .last-input {
+    width: 90%;
+    margin: 10px 25px
+}
+
+.add {
+    text-align: center;
+}
+
+/* admin page*/
+
+.title {
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+}
+.case {
+    margin-bottom: 20px;
+}
+.admincase{
+    background-color: rgba(223, 220, 220, 0.492);
+    padding: 10px;
+    margin: 0;
+    min-height: 210px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.answer_card{
+    min-height: 125px;
+}
+
+.admin_card p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-decoration: none;
+    color: black;
+}

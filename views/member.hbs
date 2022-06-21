@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+            
+        <h1 class="col-12 title">Hello {{session.user.first_name}} !</h1>
+        
+
+            <div class="col-6 card">
+                <h2 class="activite">My open questions :</h2>
+                        {{#each openQuestions}}
+                
+                <div class="case">
+
+                    <a href="questions?idQuestion={{this.id_question}}"><h2>{{this.title}} <span><br> category : {{this.nameCategory.category_title}}</span></h2></a>
+
+                    <a href="questions?idQuestion={{this.id_question}}"><h3 class="description">{{this.subject}}</h3></a>
+
+                    <a href="questions?idQuestion={{this.id_question}}" class="btn_see_more">See more</a>
+            
+                
+                </div>
+                        {{/each}}
+                <p class="info_member">No more open questions</p>
+            </div>
+
+    
+
+            
+        
+        
+        
+            <div class="col-6 card">
+                <h2 class="activite">My resolved questions :</h2>
+                {{#each resolvedQuestions}}
+                <div class="case">
+
+                    <a href="questions?idQuestion={{this.id_question}}"><h2>{{this.title}} <span><br> category : {{this.nameCategory.category_title}}</span></h2></a>
+
+                    <a href="questions?idQuestion={{this.id_question}}"><h3 class="description">{{this.subject}}</h3></a>
+
+                    <a href="questions?idQuestion={{this.id_question}}" class="btn_see_more">See more</a>
+            
+                
+                </div>
+                {{/each}}
+                <p class="info_member">No more resolved questions</p>
+            </div>
+        
+    
+    </div>
+</div>

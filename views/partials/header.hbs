@@ -1,0 +1,30 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" width="80" height="80" alt="ErrorNotFound logo">
+                    <h6>ErrorNotFound</h6>
+                </a>
+                <div id="menu-no-connect" class="menu-link">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        {{#if session.user}}
+                            <li><a href="/add">Create Question</a></li>
+                            <li><a href="/users/logout">Log out</a></li>
+                            {{#if session.user.admin}}
+                                <li><a href="/members">My account - {{session.user.first_name}}</a></li>
+                                <li><a href="/admin">My admin</a></li>
+                            {{else}}
+                                <li><a href="/members">My account - {{session.user.first_name}}</a></li>
+                            {{/if}}
+                            {{else}}
+                            <li><a href="/users">Sign in</a></li>
+                            <li><a href="/users/register">Sign up</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

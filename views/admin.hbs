@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+            
+        <h1 class="col-12 title">Hello {{session.user.first_name}} !</h1>
+        
+
+            <div class="col-md-6 card admin_card">
+                <h2 class="activite">All the reported questions :</h2>
+                        {{#each reportedQuestions}}
+                
+                <div class="case admincase"> 
+
+                    <a href="/questions?idQuestion={{this.id_question}}"><h2>{{this.title}} <span><br> category : {{this.nameCategory.category_title}}</span></h2></a>
+
+                    <a href="/questions?idQuestion={{this.id_question}}"><h3 class="description">{{this.subject}}</h3></a>
+                    
+
+                    <div class="content_flex">
+                        <div class="element_flex">
+                            <a href="/questions?idQuestion={{this.id_question}}" class="btn_see_more">See more</a>
+                        </div>
+
+                        <div class="element_flex admin_button">
+                            <a href="/admin/removeQuestion?idQuestion={{this.id_question}}" class="delete_btn btn_see_more">Delete</a>
+
+                            <a href="/admin/acceptQuestion?idQuestion={{this.id_question}}" class="accept_btn btn_see_more">Accept</a>
+                        </div>
+                    </div>
+
+                    
+            
+                </div>
+                        {{/each}}
+
+                <p>No more reported questions</p>
+            </div>
+
+    
+
+            
+        
+        
+        
+            <div class="col-md-6 card admin_card">
+                <h2 class="activite">All the reported answers :</h2>
+                {{#each reportedAnswers}}
+                <div class="case admincase answer_card">
+
+                    <a href="/questions?idQuestion={{this.id_question}}"><h2>{{question.title}}</h2></a>
+
+                    <a href="/questions?idQuestion={{this.id_question}}" class="name_author"><h3>{{this.name_author.first_name}}</h3></a>
+
+                    <a href="/questions?idQuestion={{this.id_question}}" class="description"><h3>{{this.subject}}</h3></a>
+
+                    <div class="content_flex">
+                        <div class="element_flex">
+                            <a href="/questions?idQuestion={{this.id_question}}" class="btn_see_more">See question</a>
+                        </div>
+
+                        <div class="element_flex admin_button">
+                            <a href="/admin/removeCom?idCom={{this.id_answer}}" class="delete_btn btn_see_more">Delete</a>
+
+                            <a href="/admin/acceptCom?idCom={{this.id_answer}}" class="accept_btn btn_see_more">Accept</a>
+                        </div>
+                    </div>
+                
+                </div>
+                {{/each}}
+                <p>No more reported answers</p>
+            </div>
+        
+    
+    </div>
+</div>
